@@ -1,0 +1,11 @@
+Figure 1 in the published figure
+
+Not exactly
+	Change the line colors from black to corresponding colors.
+	Change the colors for solar and demand.
+
+Coding change
+	Change the file directories. In particular, I got rid of "country_folder".
+	Load data once and then pass the data to each stacked_line() functions. 
+
+May 10, 2018

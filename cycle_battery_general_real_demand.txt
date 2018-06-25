@@ -1,0 +1,97 @@
+This file is more straightforward. After updating the file folder, you can run it. However, pay attantion that this script file generates LOTs of cases/runs.
+
+-----------------
+
+Run as it is
+The input assumptions (from the downloaded files) are 
+
+battery_size = np.arange(31,33)
+SF = np.arange(0,1.01,0.05) # solar fraction of energy production
+overbuild = [np.arange(0.1,5.1,0.1), np.arange(5.0, 30.1, 0.5)]
+overbuild = np.round(np.array([j for list in overbuild for j in list]), 2)
+
+This means there are
+2 values for battery_size
+21 values for SF
+100 values for overbuild
+
+As a result, it generated 1201 files (29.6 GB)! And the running time is 37 minutes.
+
+1 file
+United States of America_area-weighted-mean_real-demand_battery_size.npy
+
+2*100 files
+United States of America_area-weighted-mean_real-demand_battery_state_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+
+2*100 files
+United States of America_area-weighted-mean_real-demand_binary_reliability_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+
+2*100 files
+United States of America_area-weighted-mean_real-demand_hourly_binary_reliability_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+
+2*100 files
+United States of America_area-weighted-mean_real-demand_hourly_power_reliability_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+
+2*100 files
+United States of America_area-weighted-mean_real-demand_power_reliability_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+
+100 files
+United States of America_area-weighted-mean_real-demand_solar_capacity_overbuild-{overbuild}
+
+100 files
+United States of America_area-weighted-mean_real-demand_wind_capacity_overbuild-{overbuild}
+
+File size
+Each data point for the following three data series is 51,775 KB.
+
+United States of America_area-weighted-mean_real-demand_battery_state_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+United States of America_area-weighted-mean_real-demand_hourly_binary_reliability_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+United States of America_area-weighted-mean_real-demand_hourly_power_reliability_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+
+---------
+
+The alterantive runs
+
+The input assumptions (based on figures in the publication) are 
+
+battery_size = np.array([0., 0.5, 4., 32.])
+SF = np.array([0., 0.25, 0.5, 0.75, 1.]) # solar fraction of energy production
+overbuild = np.arange(0.1,4.1,0.1)
+
+This means there are
+4 values for battery_size
+5 values for SF
+40 values for overbuild
+
+As a result, it generated 881 files (5.6 GB). It took 7-8 minutes to run.
+
+1 file
+United States of America_area-weighted-mean_real-demand_battery_size.npy
+
+4*40 files
+United States of America_area-weighted-mean_real-demand_battery_state_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+
+4*40 files
+United States of America_area-weighted-mean_real-demand_binary_reliability_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+
+4*40 files
+United States of America_area-weighted-mean_real-demand_hourly_binary_reliability_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+
+4*40 files
+United States of America_area-weighted-mean_real-demand_hourly_power_reliability_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+
+4*40 files
+United States of America_area-weighted-mean_real-demand_power_reliability_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+
+40 files
+United States of America_area-weighted-mean_real-demand_solar_capacity_overbuild-{overbuild}
+
+40 files
+United States of America_area-weighted-mean_real-demand_wind_capacity_overbuild-{overbuild}
+
+File size
+Each data point for the following three data series is 12,328 KB.
+
+United States of America_area-weighted-mean_real-demand_battery_state_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+United States of America_area-weighted-mean_real-demand_hourly_binary_reliability_SF_batsize-{battery_size}-days_overbuild-{overbuild}
+United States of America_area-weighted-mean_real-demand_hourly_power_reliability_SF_batsize-{battery_size}-days_overbuild-{overbuild}

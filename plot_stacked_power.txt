@@ -1,0 +1,3 @@
+Generate dispatch curves.
+
+Change SF and dates_of_interest each time when you run it.
